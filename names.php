@@ -4,7 +4,7 @@ echo"Original Array: <br>";
 print_r($student);
 echo"<br><br>";
 
-arsort($student);
+asort($student);
 echo"Array sorted in ascending order :<br>";
 print_r($student);
 echo"<br><br>";

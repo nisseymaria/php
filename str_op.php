@@ -1,7 +1,7 @@
 <?php
 //concatention
-$part1="coding in";
-$part2="Php programming";
+$part1="coding in ";
+$part2="php programming";
 $fullText=$part1.$part2;
 echo"1.Combined text:".$fullText."<br>";
 
@@ -19,5 +19,6 @@ echo"4.Position of 'PHP':".$position."<br>";
 
 //substring extraction
 $extractedWord=substr($upperText,10,11);
+echo"5.Extracted word:" .$extractedWord. "<br>";
 
 ?>
