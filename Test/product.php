@@ -1,0 +1,29 @@
+<?php
+$conn=new mysqli("localhost","root","","sampledb");
+if($conn->connect_error){
+	die("connection failed");
+}
+$sql="SELECT * FROM product";
+$result=$conn->query($sql);
+
+echo"<h2>Product details</h2>";
+
+echo"<table border='1' cellpadding='10'>";
+echo"<tr>
+	<th>ID</th>
+	<th>Item Name</th>
+	<th>Price</th>
+</tr>";
+
+while ($row = $result->fetch_assoc()) {
+    echo "<tr>";
+    echo "<td>" . $row['id'] . "</td>";
+    echo "<td>" . $row['item_name'] . "</td>";
+    echo "<td>" . $row['price'] . "</td>";
+    echo "</tr>";
+}
+
+echo"</table>";
+
+$conn->close();
+?>
